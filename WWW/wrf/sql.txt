@@ -1,0 +1,37 @@
+//article
+DROP DATABASE IF EXISTS articledb;
+CREATE DATABASE articledb DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE articledb;
+CREATE TABLE article(
+id int(11) NOT NULL AUTO_INCREMENT,
+title varchar(30) NOT NULL,
+author varchar(30)NOT NULL,
+description text NOT NULL,
+content text DEFAULT NULL,
+dateline int(11) NOT NULL,
+PRIMARY KEY (id)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+insert into article(title,author,description,content) values('title','author','description','content');
+
+
+
+//adv
+USE articledb;
+CREATE TABLE advbanner(
+id int(11) NOT NULL AUTO_INCREMENT,
+title varchar(30) NOT NULL,
+img  varchar,
+sort Number,
+content text DEFAULT NULL,
+PRIMARY KEY (id)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+insert into article(title,content) values('admin','admin');
+
+
+USE articledb;
+CREATE TABLE userlogin(
+id INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+username VARCHAR(30) NOT NULL,
+password VARCHAR(30) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+insert into userLogin(id,username) values('',''wrf','123456');
